@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Projects" icon-name="custom:custom14" >
+    
+
+        <div slot="footer"> 
+            <lightning-button title="Delete" label="Delete" size="small" variant="brand" icon-name="utility:delete"
+             icon-position="right" onclick={deleteSelRecords}>
+
+            </lightning-button>
+            <div>
+                {message}
+            </div>
+        </div>
+                   <p class="slds-p-horizontal_small" >
+        <lightning-datatable  data={Projects.data}  columns={columns} key-field="Id"  onrowselection={prepareSelectedRows}  > </lightning-datatable>
+    </p>
+       
+    </lightning-card>
+</template>
